@@ -14,7 +14,12 @@ namespace SortNameTest
            
            var result =   SortNames.Util.SortNames( System.IO.Directory.GetCurrentDirectory()+@"\names.txt");
            var expected = File.ReadAllText(System.IO.Directory.GetCurrentDirectory() + @"\sorted.txt");
-           Assert.AreEqual(expected, result);
+            Console.WriteLine("result:"+result);
+            Console.WriteLine("expected:" + expected);
+            if (result==expected)
+                Console.WriteLine("pass");
+
+           Assert.AreEqual<string>(expected, result);
 
 
         }
@@ -28,8 +33,9 @@ namespace SortNameTest
 
             var fileResult =  File.ReadAllText(filePath);
             var expected = File.ReadAllText(System.IO.Directory.GetCurrentDirectory() + @"\sorted.txt");
-
-            Assert.AreEqual(expected, fileResult);
+            if (fileResult == expected)
+                Console.WriteLine("pass");
+            Assert.AreEqual<string>(expected, fileResult);
         }
     }
 }
