@@ -13,13 +13,14 @@ namespace SortNameTest
         {
            
            var result =   SortNames.Util.SortNames( System.IO.Directory.GetCurrentDirectory()+@"\names.txt");
-           var expected = File.ReadAllText(System.IO.Directory.GetCurrentDirectory() + @"\sorted.txt");
-            Console.WriteLine("result:"+result);
-            Console.WriteLine("expected:" + expected);
-            if (result==expected)
-                Console.WriteLine("pass");
+            var expected = @"BAKER, THEODORE
+KENT, MADISON
+SMITH, ANDREW
+SMITH, FREDRICK";
 
-           Assert.AreEqual<string>(expected, result);
+                //File.ReadAllText(System.IO.Directory.GetCurrentDirectory() + @"\sorted.txt");
+
+            Assert.AreEqual<string>(expected, result);
 
 
         }
@@ -32,9 +33,12 @@ namespace SortNameTest
             var filePath = SortNames.Util.SaveToFile(System.IO.Directory.GetCurrentDirectory() + @"\names.txt", result);
 
             var fileResult =  File.ReadAllText(filePath);
-            var expected = File.ReadAllText(System.IO.Directory.GetCurrentDirectory() + @"\sorted.txt");
-            if (fileResult == expected)
-                Console.WriteLine("pass");
+            var expected = @"BAKER, THEODORE
+KENT, MADISON
+SMITH, ANDREW
+SMITH, FREDRICK";
+            //File.ReadAllText(System.IO.Directory.GetCurrentDirectory() + @"\sorted.txt");
+
             Assert.AreEqual<string>(expected, fileResult);
         }
     }
