@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Linq;
 using System.Reflection;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
@@ -12,16 +13,17 @@ namespace SortNameTest
         public void ReadFileTest()
         {
            
-           var result = @"BAKER, THEODORE
-KENT, MADISON
-SMITH, ANDREW
-SMITH, FREDRICK";//SortNames.Util.SortNames( System.IO.Directory.GetCurrentDirectory()+@"\names.txt");
-            var expected = @"BAKER, THEODORE
-KENT, MADISON
-SMITH, ANDREW
-SMITH, FREDRICK";
+           var result = SortNames.Util.SortNames( System.IO.Directory.GetCurrentDirectory()+@"\names.txt");
 
-                //File.ReadAllText(System.IO.Directory.GetCurrentDirectory() + @"\sorted.txt");
+
+
+           // var expected = File.ReadAllText(System.IO.Directory.GetCurrentDirectory() + @"\sorted.txt");
+
+            //re-parse the file for appveyor testing
+            var expectFile = File.ReadLines(System.IO.Directory.GetCurrentDirectory() + @"\sorted.txt")
+            .OrderBy(name => name);
+            var expected = string.Join(Environment.NewLine, result.ToArray());
+
 
             Assert.AreEqual<string>(expected, result);
 
