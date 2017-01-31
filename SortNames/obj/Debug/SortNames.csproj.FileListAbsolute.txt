@@ -1,0 +1,5 @@
+C:\projects\globalx\SortNames\bin\Debug\SortNames.exe.config
+C:\projects\globalx\SortNames\bin\Debug\SortNames.exe
+C:\projects\globalx\SortNames\bin\Debug\SortNames.pdb
+C:\projects\globalx\SortNames\obj\Debug\SortNames.exe
+C:\projects\globalx\SortNames\obj\Debug\SortNames.pdb

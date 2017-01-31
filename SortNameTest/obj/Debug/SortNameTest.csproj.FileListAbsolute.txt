@@ -1,0 +1,11 @@
+C:\projects\globalx\SortNameTest\bin\Debug\names.txt
+C:\projects\globalx\SortNameTest\bin\Debug\sorted.txt
+C:\projects\globalx\SortNameTest\bin\Debug\SortNameTest.dll
+C:\projects\globalx\SortNameTest\bin\Debug\SortNameTest.pdb
+C:\projects\globalx\SortNameTest\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\projects\globalx\SortNameTest\bin\Debug\SortNames.exe
+C:\projects\globalx\SortNameTest\bin\Debug\SortNames.pdb
+C:\projects\globalx\SortNameTest\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.xml
+C:\projects\globalx\SortNameTest\obj\Debug\SortNameTest.csprojResolveAssemblyReference.cache
+C:\projects\globalx\SortNameTest\obj\Debug\SortNameTest.dll
+C:\projects\globalx\SortNameTest\obj\Debug\SortNameTest.pdb
