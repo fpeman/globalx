@@ -20,9 +20,8 @@ namespace SortNameTest
            // var expected = File.ReadAllText(System.IO.Directory.GetCurrentDirectory() + @"\sorted.txt");
 
             //re-parse the file for appveyor testing
-            var expectFile = File.ReadLines(System.IO.Directory.GetCurrentDirectory() + @"\sorted.txt")
-            .OrderBy(name => name);
-            var expected = string.Join(Environment.NewLine, result.ToArray());
+            var expectFile = File.ReadLines(System.IO.Directory.GetCurrentDirectory() + @"\sorted.txt");
+            var expected = string.Join(Environment.NewLine, expectFile.ToArray());
 
 
             Assert.AreEqual<string>(expected, result);
