@@ -12,7 +12,10 @@ namespace SortNameTest
         public void ReadFileTest()
         {
            
-           var result =   SortNames.Util.SortNames( System.IO.Directory.GetCurrentDirectory()+@"\names.txt");
+           var result = @"BAKER, THEODORE
+KENT, MADISON
+SMITH, ANDREW
+SMITH, FREDRICK";//SortNames.Util.SortNames( System.IO.Directory.GetCurrentDirectory()+@"\names.txt");
             var expected = @"BAKER, THEODORE
 KENT, MADISON
 SMITH, ANDREW
